@@ -1,0 +1,20 @@
+--- mpeg_play-2.4/mpeg_play/video.h.orig	1995-10-25 22:59:38.000000000 +0100
++++ mpeg_play-2.4/mpeg_play/video.h	2004-03-17 00:19:29.837805640 +0100
+@@ -412,7 +412,7 @@
+ #define __AIX__ 1
+ #endif
+ 
+-#if !defined(__RS6000__) && (defined(__AIX__) || defined(RS6000) || defined(_RS6000) || defined(__RS6000) || defined(__RS6000__))
++#if !defined(__RS6000__) && (defined(__AIX__) || defined(RS6000) || defined(_RS6000) || defined(__RS6000) || (__powerpc__) || defined(__RS6000__))
+ #define __RS6000__ 1
+ #endif
+ 
+@@ -431,7 +431,7 @@
+ #define __SCO__ 1
+ #endif
+ 
+-#if defined(__i386__) || defined(__VAX__) || defined(__MIPSEL__) || defined(__alpha__) || defined(__SCO__)
++#if defined(__i386__) || defined(__x86_64__) || defined(__VAX__) || defined(__MIPSEL__) || defined(__alpha__) || defined(__SCO__)
+ #undef  BIG_ENDIAN_ARCHITECTURE
+ #define LITTLE_ENDIAN_ARCHITECTURE 1
+ #endif
