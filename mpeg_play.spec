@@ -3,10 +3,10 @@ Summary(pl):	Dekoder obrazu MPEG-1 z Berkeley
 Name:		mpeg_play
 Version:	2.4
 Release:	1
+License:	BSD
 Group:		X11/Applications/Multimedia
 Group(de):	X11/Applikationen/Multimedia
 Group(pl):	X11/Aplikacje/Multimedia
-License:	BSD
 URL:		ftp://mm-ftp.cs.berkeley.edu/pub/mpeg
 Source0:	ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/play/%{name}-%{version}-src.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -43,6 +43,7 @@ rm -f ../ANNOUNCE
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+
 install mpeg_play.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install mpeg_play $RPM_BUILD_ROOT%{_bindir}
 
