@@ -2,7 +2,7 @@ Summary:	Berkeley MPEG-1 Video Decoder
 Summary(pl):	Dekoder obrazu MPEG-1 z Berkeley
 Name:		mpeg_play
 Version:	2.4
-Release:	3
+Release:	4
 License:	BSD
 Group:		X11/Applications/Multimedia
 Source0:	ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/play/%{name}-%{version}-src.tar.gz
