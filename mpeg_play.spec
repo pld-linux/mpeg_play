@@ -36,7 +36,7 @@ rm -f ../ANNOUNCE
 
 %build
 %{__make} -fMakefile.proto \
-	CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -I/usr/X11R6/include" \
+	CFLAGS="%{rpmcflags} -I/usr/X11R6/include" \
 	LDFLAGS="%{!?debug:-s} -L/usr/X11R6/lib" \
 	LIBS="-lX11 -lXext"
 
