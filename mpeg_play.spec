@@ -5,10 +5,10 @@ Version:	2.4
 Release:	3
 License:	BSD
 Group:		X11/Applications/Multimedia
-URL:		ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/
 Source0:	ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/play/%{name}-%{version}-src.tar.gz
 # Source0-md5:	4e56f1d436639e79c3d0f49857510361
-Patch0:		%{name}-ppc.patch
+URL:		ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/
+Patch0:		%{name}-morearchs.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,12 +28,12 @@ half-toning), nie obs³uguje natomiast synchronizacji ani strumieni
 audio.
 
 %prep
-%setup -q -n %{name}
+%setup -q -c
 %patch0 -p1
-rm -f ../ANNOUNCE
 
 %build
-%{__make} -fMakefile.proto \
+%{__make} -C mpeg_play -fMakefile.proto \
+	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -I/usr/X11R6/include" \
 	LDFLAGS="%{rpmldflags} -L/usr/X11R6/%{_lib}" \
 	LIBS="-lX11 -lXext"
@@ -42,14 +42,14 @@ rm -f ../ANNOUNCE
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install mpeg_play.1 $RPM_BUILD_ROOT%{_mandir}/man1
-install mpeg_play $RPM_BUILD_ROOT%{_bindir}
+install mpeg_play/mpeg_play.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install mpeg_play/mpeg_play $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ANNOUNCE BUGS CHANGES PLATFORMS README* TODO VERSION
+%doc mpeg_play/{ANNOUNCE,BUGS,CHANGES,PLATFORMS,README*,TODO,VERSION}
 %attr(755,root,root) %{_bindir}/mpeg_play
 %{_mandir}/man1/mpeg_play.1*
