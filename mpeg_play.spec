@@ -5,8 +5,6 @@ Version:	2.4
 Release:	1
 License:	BSD
 Group:		X11/Applications/Multimedia
-Group(de):	X11/Applikationen/Multimedia
-Group(pl):	X11/Aplikacje/Multimedia
 URL:		ftp://mm-ftp.cs.berkeley.edu/pub/mpeg
 Source0:	ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/play/%{name}-%{version}-src.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
