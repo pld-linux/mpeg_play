@@ -7,6 +7,7 @@ License:	BSD
 Group:		X11/Applications/Multimedia
 URL:		ftp://mm-ftp.cs.berkeley.edu/pub/mpeg
 Source0:	ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/play/%{name}-%{version}-src.tar.gz
+# Source0-md5:	4e56f1d436639e79c3d0f49857510361
 Patch0:		%{name}-ppc.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
