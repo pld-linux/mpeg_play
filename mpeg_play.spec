@@ -2,11 +2,12 @@ Summary:	Berkeley MPEG-1 Video Decoder
 Summary(pl):	Dekoder obrazu MPEG-1 z Berkeley
 Name:		mpeg_play
 Version:	2.4
-Release:	1
+Release:	2
 License:	BSD
 Group:		X11/Applications/Multimedia
 URL:		ftp://mm-ftp.cs.berkeley.edu/pub/mpeg
 Source0:	ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/play/%{name}-%{version}-src.tar.gz
+Patch0:		%{name}-ppc.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -30,6 +31,7 @@ audio.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1 
 rm -f ../ANNOUNCE
 
 %build
@@ -45,8 +47,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install mpeg_play.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install mpeg_play $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf ANNOUNCE BUGS CHANGES PLATFORMS README* TODO VERSION
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -54,4 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/mpeg_play
 %{_mandir}/man1/mpeg_play.1*
-%doc *.gz
+%doc ANNOUNCE BUGS CHANGES PLATFORMS README* TODO VERSION
