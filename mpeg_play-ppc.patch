@@ -1,0 +1,12 @@
+diff -uNr mpeg_play.orig/video.h mpeg_play/video.h
+--- mpeg_play.orig/video.h	Wed Oct 25 22:59:38 1995
++++ mpeg_play/video.h	Wed Jul  3 09:58:34 2002
+@@ -412,7 +412,7 @@
+ #define __AIX__ 1
+ #endif
+ 
+-#if !defined(__RS6000__) && (defined(__AIX__) || defined(RS6000) || defined(_RS6000) || defined(__RS6000) || defined(__RS6000__))
++#if !defined(__RS6000__) && (defined(__AIX__) || defined(RS6000) || defined(_RS6000) || defined(__RS6000) || defined(__powerpc__) || defined(__RS6000__))
+ #define __RS6000__ 1
+ #endif
+ 
