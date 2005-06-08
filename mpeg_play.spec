@@ -8,6 +8,7 @@ Group:		X11/Applications/Multimedia
 Source0:	ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/play/%{name}-%{version}-src.tar.gz
 # Source0-md5:	4e56f1d436639e79c3d0f49857510361
 URL:		ftp://mm-ftp.cs.berkeley.edu/pub/mpeg/
+BuildRequires:	XFree86-devel
 Patch0:		%{name}-morearchs.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
