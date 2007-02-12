@@ -1,5 +1,5 @@
 Summary:	Berkeley MPEG-1 Video Decoder
-Summary(pl):	Dekoder obrazu MPEG-1 z Berkeley
+Summary(pl.UTF-8):   Dekoder obrazu MPEG-1 z Berkeley
 Name:		mpeg_play
 Version:	2.4
 Release:	4
@@ -21,11 +21,11 @@ Floyd-Steinberg, ordered dither, and half-toning algorithms that
 tradeoff quality and performance. Neither the library nor the main
 routine handle real-time synchronization or audio streams.
 
-%description -l pl
-Dekoder jest zaimplementowany jako biblioteka przetwarzaj±ca strumieÒ
-MPEG-1 i wy∂wietlaj±ca go w okienku X Window w 8, 24 lub 32 bpp.
-Obs≥uguje kilka rodzajÛw ditheringu (Floyd-Steinberg, ordered dither,
-half-toning), nie obs≥uguje natomiast synchronizacji ani strumieni
+%description -l pl.UTF-8
+Dekoder jest zaimplementowany jako biblioteka przetwarzajƒÖca strumie≈Ñ
+MPEG-1 i wy≈õwietlajƒÖca go w okienku X Window w 8, 24 lub 32 bpp.
+Obs≈Çuguje kilka rodzaj√≥w ditheringu (Floyd-Steinberg, ordered dither,
+half-toning), nie obs≈Çuguje natomiast synchronizacji ani strumieni
 audio.
 
 %prep
