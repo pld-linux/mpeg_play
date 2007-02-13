@@ -1,5 +1,5 @@
 Summary:	Berkeley MPEG-1 Video Decoder
-Summary(pl.UTF-8):   Dekoder obrazu MPEG-1 z Berkeley
+Summary(pl.UTF-8):	Dekoder obrazu MPEG-1 z Berkeley
 Name:		mpeg_play
 Version:	2.4
 Release:	4
