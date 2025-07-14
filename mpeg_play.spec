@@ -30,7 +30,7 @@ audio.
 
 %prep
 %setup -q -c
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} -C mpeg_play -fMakefile.proto \
